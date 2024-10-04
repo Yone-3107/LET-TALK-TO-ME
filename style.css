@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    background: linear-gradient(rgb(171, 219, 235), rgb(206, 238, 248));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+h1 {
+    position: relative;
+    color: #333;
+    text-align: center;
+    margin: 0; /* Sửa margin */
+    padding: 60px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Bóng chữ */
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem; /* Kích thước phông chữ lớn */
+    z-index: 2;
+}
+a:link, a:visited {
+    background-color: #60c0e6;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px; /* Khoảng cách giữa các liên kết */
+    transition: background-color 0.3s;
+    position: relative; /* Để có thể áp dụng z-index */
+    z-index: 4; /* Đảm bảo nó nằm trên cùng */
+}
+
+a:hover, a:active {
+    background-color: rgb(37, 235, 202);
+    transform: scale(1.05);
+}
+.link-container {
+    position: absolute; /* Để có thể đặt nó ở vị trí mong muốn */
+    top: 85%; /* Điều chỉnh vị trí dọc theo ý muốn */
+    left: 280px; /* Khoảng cách từ bên trái */
+    z-index: 4; /* Đảm bảo nó nằm trên cùng */
+}
+
+.overlay-image {
+    background: url('Untitled.png') no-repeat center center;
+    background-size: contain;
+    width: 65%;
+    height: 65%;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
